@@ -1,4 +1,4 @@
-export async function decompress(url) {
+export async function decompress(url: string) {
   const ds = new DecompressionStream('gzip');
   const response = await fetch(`data:application/octet-stream;base64,${url}`);
   const blob_in = await response.blob();
